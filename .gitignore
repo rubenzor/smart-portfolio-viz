@@ -1,0 +1,56 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.pkl
+
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Archivos temporales ---
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Datos grandes ---
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.parquet
+*.feather
+*.hdf5
+*.db
+*.sqlite
+*.zip
+*.gz
+*.tar
+*.rar
+
+# --- Cache de librerías ---
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# --- Configuración IDE ---
+.vscode/
+.idea/
+*.iml
+
+# --- Resultados y salidas ---
+outputs/
+results/
+plots/
