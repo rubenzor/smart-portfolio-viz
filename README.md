@@ -5,6 +5,10 @@ Cuadro de mando completo que permite montar carteras personalizadas, monitorizar
 su evolución frente a benchmarks, recibir recomendaciones heurísticas basadas en
 momentum, noticias y proyecciones lineales, y explorar predicciones de cada
 activo.
+Cuadro de mando que monitoriza una cartera, la compara con un benchmark y
+sugiere rebalanceos basados en señales predictivas y optimización con
+restricciones realistas (costes y rotación), incluyendo backtesting con
+validación temporal.
 
 ## Objetivos principales
 - O1. Monitorizar rendimiento, riesgo y drawdowns de la cartera vs. benchmark.

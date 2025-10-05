@@ -31,6 +31,8 @@ experiencia de usuario final.
    - *Estado actual*: primer MVP construido en Streamlit (`smart_portfolio_viz.app`)
      con edición de cartera, monitor de activos, recomendaciones y noticias en
      vivo. Próximos pasos: hardening, autenticación y diseño visual avanzado.
+   - *Estado actual*: pendiente de definición tecnológica (Streamlit, Dash,
+     Next.js + API, etc.). Requiere mockups y definición de flujos de usuario.
 
 4. **Orquestación y servicios (Service Layer)**
    - *Responsabilidades*: exponer APIs, programar tareas de actualización,
@@ -77,6 +79,12 @@ flowchart LR
    Firebase, etc.) y diseñar esquema de usuarios/portfolios.
 5. **Motor de recomendaciones**: evolucionar la lógica heurística actual hacia
    un motor híbrido (reglas + modelos) con explicaciones detalladas por activo.
+3. **Definir UI**: prototipar dashboard en Figma y seleccionar tecnología para
+   el front-end (p. ej. Streamlit para MVP vs. stack React completo).
+4. **Persistencia y autenticación**: decidir mecanismo (PostgreSQL + Supabase,
+   Firebase, etc.) y diseñar esquema de usuarios/portfolios.
+5. **Motor de recomendaciones**: combinar señales cuantitativas con un motor de
+   reglas que genere alertas accionables, acompañado de explicaciones.
 
 ## 4. Próximos entregables técnicos
 

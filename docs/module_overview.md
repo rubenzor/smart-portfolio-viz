@@ -91,3 +91,11 @@ Archivo principal de la interfaz. Organiza el dashboard en cuatro bloques:
    Firebase, etc.) y diseñar esquema de usuarios/portfolios.
 4. **Motor de recomendaciones:** evolucionar las reglas heurísticas hacia un
    sistema híbrido (reglas + ML) con explicabilidad detallada.
+## 4. Próximos pasos sugeridos
+
+1. **Persistencia y caché:** almacenar descargas en disco/base de datos para no
+   saturar la API de Yahoo.
+2. **Señales y modelos:** incorporar indicadores técnicos y un pequeño motor de
+   predicción para alimentar recomendaciones.
+3. **Interfaz web:** construir paneles en *Streamlit* o *FastAPI + React* usando
+   `PortfolioOverview` como *payload* principal.
