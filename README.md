@@ -1,6 +1,10 @@
 # Cartera Inteligente: Visualización y Rebalanceo Predictivo
 
 ## Descripción breve
+Cuadro de mando completo que permite montar carteras personalizadas, monitorizar
+su evolución frente a benchmarks, recibir recomendaciones heurísticas basadas en
+momentum, noticias y proyecciones lineales, y explorar predicciones de cada
+activo.
 Cuadro de mando que monitoriza una cartera, la compara con un benchmark y
 sugiere rebalanceos basados en señales predictivas y optimización con
 restricciones realistas (costes y rotación), incluyendo backtesting con
@@ -41,6 +45,29 @@ pip install -r requirements.txt
   futuros optimizadores.
 - `smart_portfolio_viz.workflows.overview`: orquestación de ingesta + métricas
   para construir un resumen listo para la capa de visualización.
+- `smart_portfolio_viz.insights`: heurísticas para clasificar la cartera,
+  generar recomendaciones de compra/venta, proponer sustitutos por sector y
+  proyectar precios a corto plazo.
+
+### Aplicación Streamlit
+Ejecuta la interfaz completa (gráficos de asignación, monitor por activo,
+recomendaciones, noticias y predicciones) con:
+
+```bash
+streamlit run src/smart_portfolio_viz/app.py
+```
+
+La barra lateral permite definir tickers, pesos, rango temporal e intervalo de
+datos, así como un benchmark opcional. El dashboard incluye:
+
+- Gráfico circular y tabla comparativa de la asignación de cartera y retornos
+  rápidos (1, 5, 30 días, 6 meses y 1 año).
+- Monitor por activo con selector de ventana temporal al estilo Yahoo Finance.
+- Resumen de performance frente al benchmark, estado de la cartera y proyección
+  de 30 días.
+- Recomendaciones de compra/venta con sustitutos sugeridos y tabla de precios
+  proyectados por activo.
+- Sección de noticias con *bullet points* y enlaces directos a las fuentes.
 
 ### Ejemplo rápido
 ```python

@@ -56,6 +56,41 @@ retornos y la generación del informe de performance. Devuelve un
 - `contributions`: aportación anualizada de cada activo.
 - `correlation_matrix`: matriz de correlaciones para detectar solapamientos.
 
+## 4. Motor de insights — `smart_portfolio_viz.insights`
+
+- `compute_horizon_returns`: calcula variaciones porcentuales para varias
+  ventanas temporales (1D, 5D, 30D, 6M, 1Y), alimentando la tabla comparativa de
+  la UI.
+- `build_asset_insights`: genera recomendaciones heurísticas (comprar, vender,
+  mantener) y posibles sustitutos basados en el sector de cada activo.
+- `portfolio_projection`: agrega las predicciones de cada activo para estimar la
+  trayectoria de la cartera.
+- `fetch_latest_news`: obtiene titulares recientes desde Yahoo Finance para
+  mostrarlos como *bullet points*.
+
+## 5. Interfaz Streamlit — `smart_portfolio_viz.app`
+
+Archivo principal de la interfaz. Organiza el dashboard en cuatro bloques:
+
+1. **Configuración y asignación:** edición de tickers/pesos, gráfico circular y
+   tabla de retornos rápidos.
+2. **Monitor de activos:** pestañas con gráficas interactivas y selector de
+   ventana temporal (1, 5, 30 días, 6 meses, 1 año).
+3. **Recomendaciones y predicciones:** estado frente al benchmark, proyección de
+   30 días, tabla de acciones sugeridas y precios proyectados.
+4. **Noticias y contexto:** titulares agrupados por activo con enlace a la
+   fuente original.
+
+## 6. Próximos pasos sugeridos
+
+1. **Persistencia y caché:** almacenar descargas en disco/base de datos para no
+   saturar la API de Yahoo.
+2. **Señales y modelos:** ampliar las heurísticas actuales con modelos más
+   sofisticados (ARIMA, Prophet, ML supervisado) y métricas adicionales.
+3. **Persistencia y autenticación:** decidir mecanismo (PostgreSQL + Supabase,
+   Firebase, etc.) y diseñar esquema de usuarios/portfolios.
+4. **Motor de recomendaciones:** evolucionar las reglas heurísticas hacia un
+   sistema híbrido (reglas + ML) con explicabilidad detallada.
 ## 4. Próximos pasos sugeridos
 
 1. **Persistencia y caché:** almacenar descargas en disco/base de datos para no
