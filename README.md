@@ -39,21 +39,28 @@ pip install -r requirements.txt
 - `smart_portfolio_viz.analytics.portfolio`: cálculos de métricas de rendimiento,
   riesgo y comparación con benchmarks, pensados para alimentar el dashboard y
   futuros optimizadores.
+- `smart_portfolio_viz.workflows.overview`: orquestación de ingesta + métricas
+  para construir un resumen listo para la capa de visualización.
 
 ### Ejemplo rápido
 ```python
 from datetime import datetime, timedelta
 
-from smart_portfolio_viz.data.yahoo import build_price_frame
-from smart_portfolio_viz.analytics.portfolio import PortfolioSnapshot, performance
+from smart_portfolio_viz.workflows import OverviewConfig, build_portfolio_overview
 
-prices = build_price_frame(["AAPL", "MSFT"], start=datetime.utcnow() - timedelta(days=365))
-weights = {"AAPL": 0.6, "MSFT": 0.4}
-report = performance(PortfolioSnapshot(prices=prices, weights=weights))
+config = OverviewConfig(
+    tickers=["AAPL", "MSFT", "GOOG"],
+    weights={"AAPL": 0.5, "MSFT": 0.3, "GOOG": 0.2},
+    start=datetime.utcnow() - timedelta(days=365),
+    benchmark="^GSPC",
+)
+overview = build_portfolio_overview(config)
 
-print(report.annualised_return)
-print(report.sharpe_ratio)
+print("Retorno anualizado: ", overview.performance.annualised_return)
+print("Sharpe: ", overview.performance.sharpe_ratio)
+print("Contribuciones anualizadas:\n", overview.contributions)
 ```
 
 Para más contexto sobre la visión y los siguientes pasos, revisa
-[`docs/architecture.md`](docs/architecture.md).
+[`docs/architecture.md`](docs/architecture.md) y la
+[`Guía de módulos`](docs/module_overview.md).
