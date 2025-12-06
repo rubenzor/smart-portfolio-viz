@@ -1,7 +1,11 @@
 import os
 import requests
 
-API_BASE = os.getenv("API_BASE", "http://backend:8000/api/v1")
+BACKEND_URL = os.getenv("BACKEND_URL", "http://backend:8000")
+BACKEND_URL = BACKEND_URL.rstrip("/")  # evitar dobles //
+
+API_BASE = f"{BACKEND_URL}/api/v1"
+
 
 def api_get(path):
     return requests.get(API_BASE + path, timeout=15)

@@ -6,6 +6,7 @@ from dash import callback, Input, Output, State, ctx, no_update, ALL
 from dash.exceptions import PreventUpdate
 from dash import html, dcc
 import dash_bootstrap_components as dbc
+from services.backend_api import API_BASE
 
 import requests
 
@@ -199,7 +200,7 @@ def smart_search_assets(search_value, selected_value):
     # 3) Buscar activos
     try:
         resp = requests.get(
-            "http://backend:8000/api/v1/search/ticker",
+            f"{API_BASE}/search/ticker",
             params={"q": search_value},
             timeout=5,
         )
