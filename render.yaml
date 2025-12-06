@@ -1,0 +1,20 @@
+services:
+  - name: quint-backend
+    type: web
+    env: docker
+    plan: free
+    dockerContext: .
+    dockerfilePath: ./Dockerfile.backend
+    envVars:
+      - key: ENV
+        value: "production"
+
+  - name: quint-frontend
+    type: web
+    env: docker
+    plan: free
+    dockerContext: .
+    dockerfilePath: ./Dockerfile.frontend
+    envVars:
+      - key: BACKEND_URL
+        value: https://quint-backend.onrender.com   # ← luego lo actualizas

@@ -6,7 +6,9 @@ WORKDIR /app
 COPY frontend/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# NO copiamos el código — se monta con bind-mount
+# Copiar el código del frontend
+COPY frontend /app
+
 EXPOSE 8050
 
 CMD ["python", "app.py"]
