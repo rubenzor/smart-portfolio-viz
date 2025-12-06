@@ -14,12 +14,15 @@ services:
           type: redis
           property: host
       - key: REDIS_PORT
-        value: "6379"
-      - key: REDIS_PASSWORD
         fromService:
           name: quint-redis
           type: redis
-          property: password
+          property: port
+      - key: REDIS_URL
+        fromService:
+          name: quint-redis
+          type: redis
+          property: connectionString
 
   - name: quint-frontend
     type: web
@@ -34,3 +37,5 @@ services:
   - name: quint-redis
     type: redis
     plan: free
+    ipAllowList:
+      - source: 0.0.0.0/0
