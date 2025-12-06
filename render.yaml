@@ -11,12 +11,14 @@ services:
       - key: REDIS_HOST
         fromService:
           name: quint-redis
+          type: redis
           property: host
       - key: REDIS_PORT
-        value: 6379
+        value: "6379"
       - key: REDIS_PASSWORD
         fromService:
           name: quint-redis
+          type: redis
           property: password
 
   - name: quint-frontend
@@ -27,11 +29,8 @@ services:
     dockerfilePath: ./Dockerfile.frontend
     envVars:
       - key: BACKEND_URL
-        value: https://quint-backend.onrender.com   # Luego se reemplaza con la URL real
+        value: https://quint-backend.onrender.com
 
-databases:
   - name: quint-redis
-    plan: free
-    databaseName: redis
-    user: default
     type: redis
+    plan: free
