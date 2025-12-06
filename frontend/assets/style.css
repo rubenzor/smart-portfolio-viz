@@ -1,0 +1,428 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: radial-gradient(circle at top, #0f172a 0, #020617 45%, #000 100%);
+  color: #e5e7eb;
+}
+/* Eliminar el borde feo por encima de los tabs */
+.dcc-tabs > .tab--selected {
+    border-top: none !important;
+}
+
+/* Glow suave a los botones de toolbar */
+.neon-btn-outline, .neon-btn {
+    transition: 0.15s ease-in-out;
+}
+
+.neon-btn-outline:hover {
+    box-shadow: 0 0 8px rgba(0, 180, 255, 0.6);
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 120, 0.7);
+}
+
+/* Estilo premium para dropdown envuelto en Div */
+#portfolio-select > * {
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.header-wrapper {
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 4px;
+}
+
+.neon-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #22d3ee, #a855f7, #f97316);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
+}
+
+.neon-subtitle {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.neon-card {
+  background: radial-gradient(circle at top left, #0b1120, #020617);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9),
+    0 0 40px rgba(56, 189, 248, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.neon-card-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25) !important;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.neon-tabs-container .tab {
+  background: transparent !important;
+}
+
+.neon-tab {
+  color: #9ca3af !important;
+}
+
+.neon-tab--selected,
+.dash-tab--selected {
+  color: #e5e7eb81 !important;
+  border-bottom: 2px solid #22d3ee !important;
+}
+
+.neon-dropdown .Select-control,
+.neon-input {
+  background-color: #020617 !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(148, 163, 184, 0.4) !important;
+  color: #e5e7eb !important;
+}
+
+.neon-btn {
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.5);
+}
+
+.neon-btn-outline {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: transparent;
+}
+
+.neon-json {
+  background-color: #020617;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #cbd5f5;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.chart-wrapper {
+  border-radius: 16px;
+  padding: 12px;
+  background: radial-gradient(circle at top, #020617, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.neon-section-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.portfolio-meta-list {
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+/* ----- Fix tabs ----- */
+.neon-tabs-container .tab--selected {
+    background-color: #1e293b !important; /* gris oscuro */
+    color: #e2e8f0 !important;           /* gris claro */
+    border-bottom: 2px solid #3b82f6 !important; /* azul */
+}
+
+.neon-tabs-container .tab {
+    background-color: #0f172a !important;
+    color: #94a3b8 !important;
+}
+
+.neon-tabs-container .tab:hover {
+    color: #f1f5f9 !important;
+    background-color: #1e293b !important;
+}
+
+.chart-container {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    height: 430px; /* ajustable según prefieras */
+}
+
+.chart-container .js-plotly-plot,
+.chart-container .echarts-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 14px;
+}
+/* Estilo para inputs del modal */
+.form-control {
+    border-radius: 10px !important;
+    padding: 10px !important;
+}
+
+.modal-content {
+    background-color: #0f172a !important; /* azul oscuro elegante */
+    border-radius: 16px !important;
+}
+
+.modal-header, .modal-footer {
+    border-color: #1e293b !important;
+}
+/* -----------------------------
+   TABLA DE ACTIVOS – PREMIUM
+   ----------------------------- */
+
+.asset-table {
+    width: 100%;
+    background-color: transparent !important;
+    color: #e2e8f0 !important;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+.asset-header {
+    color: #94a3b8 !important;
+    font-weight: 600;
+    border-bottom: 1px solid #1e293b !important;
+}
+
+.asset-row {
+    background-color: #1e293b !important;
+    border-radius: 10px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.asset-row:hover {
+    background-color: #273445 !important;
+}
+
+.asset-row td {
+    padding: 12px 16px !important;
+    vertical-align: middle !important;
+}
+
+.asset-symbol-cell {
+    font-weight: 600;
+    color: #38bdf8; /* azul claro */
+}
+
+.asset-weight-cell {
+    color: #cbd5e1;
+}
+
+.asset-delete-btn {
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+}
+
+.asset-delete-btn:hover svg {
+    filter: brightness(1.4);
+    transform: scale(1.15);
+    transition: 0.15s ease-in-out;
+}
+/***********************************************
+   MODAL DE CREAR CARTERA — ESTILO OSCURO PREMIUM
+ ***********************************************/
+
+/* Contenedor del modal */
+#create-portfolio-modal .modal-content {
+    background-color: #0f172a !important;  /* fondo azul oscuro */
+    border: 1px solid #1e293b;
+}
+
+/* TITULOS Y ETIQUETAS */
+#create-portfolio-modal label,
+#create-portfolio-modal h4,
+#create-portfolio-modal h5 {
+    color: #ffffff !important;
+}
+
+/* TEXTO NORMAL */
+#create-portfolio-modal p,
+#create-portfolio-modal small {
+    color: #cbd5e1 !important;
+}
+
+/* INPUTS */
+#create-portfolio-modal .form-control {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #334155 !important;
+}
+
+#create-portfolio-modal .form-control::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* BOTONES */
+#create-portfolio-modal .btn-info {
+    background-color: #9333ea !important; /* Morado neon */
+    border: none !important;
+}
+
+#create-portfolio-modal .btn-success {
+    background-color: #10b981 !important; /* verde bonito */
+}
+
+#create-portfolio-modal .btn-secondary {
+    background-color: #475569 !important;
+}
+/* ================================
+   TABLA PERSONALIZADA — IGNORA BOOTSTRAP
+   ================================ */
+
+/* Fuerza a ignorar clases Bootstrap como .table-dark */
+.custom-table-container table,
+.custom-table-container th,
+.custom-table-container td {
+    all: unset;
+    display: table-cell;
+    padding: 12px 18px;
+    font-size: 15px;
+    border-collapse: collapse;
+    font-family: inherit;
+}
+
+/* Contenedor */
+.custom-table-container {
+    width: 100%;
+    background: #0f172a; 
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+}
+
+/* Cabecera */
+.custom-table-container thead {
+    background: #1e293b !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Filas */
+.custom-table-container tbody tr {
+    background: #334155 !important;
+    color: #ffffff !important;
+}
+
+.custom-table-container tbody tr:hover {
+    background: #475569 !important;
+}
+
+/* Icono papelera */
+.asset-delete-btn svg {
+    color: #ef4444 !important;
+}
+#portfolio-select,
+#benchmark-symbol {
+    color: #131212f5 !important;
+}
+
+#portfolio-select * {
+    color: #ffffff;
+}
+
+#benchmark-symbol::placeholder {
+    color: #cbd5e196 !important;
+}
+
+div.Select-control {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+/* ---- Dropdown seleccionado ---- */
+.Select-control,
+.VirtualizedSelectOption {
+    background-color: #1e293b !important;  /* fondo oscuro */
+    color: white !important;
+}
+
+/* ---- Texto dentro del input del dropdown ---- */
+.Select--single > .Select-control .Select-value {
+    color: white !important;
+}
+
+/* ---- Placeholder ---- */
+.Select-placeholder {
+    color: #cbd5e1 !important;   /* gris claro */
+}
+
+/* ---- Opciones del menú desplegable ---- */
+.Select-menu-outer {
+    background-color: #0f172a !important;  /* fondo oscuro */
+    color: white !important;
+    border: 1px solid #334155 !important;
+}
+
+/* ---- Hover de opciones ---- */
+.VirtualizedSelectOption:hover {
+    background-color: #334155 !important;
+    color: white !important;
+}
+
+/* ---- Flecha del dropdown ---- */
+.Select-arrow {
+    border-color: white transparent transparent !important;
+}
+
+/* ---- Flecha rotada (cuando está abierto) ---- */
+.is-open > .Select-control .Select-arrow {
+    border-color: transparent transparent white !important;
+}
+
+.card-header-under {
+    position: relative;
+    z-index: 1;       /* detrás */
+    overflow: hidden; /* evita que sobresalga */
+}
+
+.card-container-over {
+    position: relative;
+    z-index: 2;       /* delante: el borde */
+}
+
+/* Texto principal del dropdown */
+.Select-control .Select-value-label {
+    color: #ffffff !important;
+}
+
+/* Placeholder */
+.Select-placeholder {
+    color: #ffffff !important;
+    opacity: 0.85;
+}
+
+/* Texto cuando escribes dentro del input (modo search) */
+.Select-input input {
+    color: #ffffff !important;
+}
+
+/* Texto de las opciones dentro del menú */
+.Select-option {
+    color: #ffffff !important;
+}
+
+/* Opción seleccionada dentro del menú */
+.Select-option.is-selected {
+    color: #ffffff !important;
+}
+
+/* Opción enfocada (hover) */
+.Select-option.is-focused {
+    color: #ffffff !important;
+}
+
+.corr-table-wrapper {
+    padding-top: 25px !important;
+}

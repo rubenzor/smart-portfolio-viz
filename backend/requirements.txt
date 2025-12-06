@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+pydantic
+yfinance
+pandas
+numpy
+statsmodels
+typing
+scipy
+
