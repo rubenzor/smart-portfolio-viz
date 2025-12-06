@@ -6,8 +6,18 @@ services:
     dockerContext: .
     dockerfilePath: ./Dockerfile.backend
     envVars:
-      - key: ENV
-        value: "production"
+      - key: SQLITE_PATH
+        value: /app/data/tfg.db
+      - key: REDIS_HOST
+        fromService:
+          name: quint-redis
+          property: host
+      - key: REDIS_PORT
+        value: 6379
+      - key: REDIS_PASSWORD
+        fromService:
+          name: quint-redis
+          property: password
 
   - name: quint-frontend
     type: web
@@ -17,4 +27,11 @@ services:
     dockerfilePath: ./Dockerfile.frontend
     envVars:
       - key: BACKEND_URL
-        value: https://quint-backend.onrender.com   # ← luego lo actualizas
+        value: https://quint-backend.onrender.com   # Luego se reemplaza con la URL real
+
+databases:
+  - name: quint-redis
+    plan: free
+    databaseName: redis
+    user: default
+    type: redis
